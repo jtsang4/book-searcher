@@ -13,7 +13,7 @@ export default async function getIpfsGateways() {
       return config.ipfs_gateways;
     });
   } else {
-    const ipfsGateways: string[] = JSON.parse(localStorage.getItem('ipfs_gateways') || '[]');
+    const ipfsGateways: string[] = JSON.parse(localStorage.getItem('ipfs_gateways') || '["https://ipfs.io","https://cf-ipfs.com","https://dweb.link","https://gateway.ipfs.io"]');
     return ipfsGateways;
   }
 }
